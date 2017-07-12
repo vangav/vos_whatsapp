@@ -1,0 +1,115 @@
+
+# "First, solve the problem. Then, write the code. -John Johnson"
+# "Or use Vangav M"
+# www.vangav.com
+
+# MIT License
+#
+# Copyright (c) 2016 Vangav
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+# Community
+# Facebook Group: Vangav Open Source - Backend
+#   fb.com/groups/575834775932682/
+# Facebook Page: Vangav
+#   fb.com/vangav.f
+# 
+# Third party communities for Vangav Backend
+#   - play framework
+#   - cassandra
+#   - datastax
+#   
+# Tag your question online (e.g.: stack overflow, etc ...) with
+#   #vangav_backend
+#   to easier find questions/answers online
+ 
+# @author mustapha
+# fb.com/mustapha.abdallah
+
+# CassandraProperties defines how an app's backend instance interacts with
+#   cassandra
+
+# How many times to try to connect to each cassandra instance
+# In multi_deployment all instances in the topology are tried
+# default is 3
+connection_retries=3
+
+# How many times to retry a query upon failure
+# Default: 3
+query_retries=3
+
+# The fetch size specifies how many rows will be returned at once by Cassandra
+#   (in other words, it’s the size of each page).
+# Note that setting a fetch size doesn’t mean that Cassandra will always return
+#   the exact number of rows, it is possible that it returns slightly more or
+#   less results.
+# Default: 5000
+fetch_size=5000
+
+# Write Consistency Level
+# The consistency level determines the number of replicas on which the write
+#   must succeed before returning an acknowledgment to the client application
+# Possible values -->
+# docs.datastax.com/en/cassandra/2.0/cassandra/dml/dml_config_consistency_c.html
+# Default : ONE
+# Description of ONE: A write must be written to the commit log and memtable of
+#                       at least one replica node
+# Usage of ONE: Satisfies the needs of most users because consistency
+#                 requirements are not stringent
+write_consistency_level=ONE
+
+# Read Consistency Level
+# The consistency level specifies how many replicas must respond to a read
+#   request before returning data to the client application
+# Possible values -->
+# docs.datastax.com/en/cassandra/2.0/cassandra/dml/dml_config_consistency_c.html
+# Default : ONE
+# Description of ONE: Returns a response from the closest replica, as
+#                       determined by the snitch. By default, a read repair
+#                       runs in the background to make the other replicas
+#                       consistent.
+# Usage of ONE: Provides the highest availability of all the levels if you can
+#                 tolerate a comparatively high probability of stale data being
+#                 read. The replicas contacted for reads may not always have
+#                 the most recent write.
+read_consistency_level=ONE
+
+# Possible deployment modes
+#	1- single_deployment for a single cassandra instance deployment
+#	2- multi_deployment for multi-instances on multiple nodes
+# Default: single_deployment
+deployment_mode=single_deployment
+
+# single_deployment instance ip
+# Default: 127.0.0.1
+single_deployment_ip=127.0.0.1
+
+# topology of multi_deployment instances gives instances names comma ','
+#   separated
+# Default: one instance with ip 127.0.0.1
+# e.g.: multi_deployment_topology=dc1_rack1_node1,dc2_rack1_node1
+multi_deployment_topology=dc1_rack1_node1
+
+# the ip for each instance in the topology
+# ips set here must be reachable from this backend instance
+# Default: 127.0.0.1
+# e.g.: dc1_rack1_node1_ip=192.168.1.111
+# e.g.: dc2_rack1_node1_ip=192.168.1.112
+dc1_rack1_node1_ip=127.0.0.1

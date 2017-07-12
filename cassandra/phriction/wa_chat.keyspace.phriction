@@ -1,0 +1,32 @@
+= **Keyspace: wa_chat** =
+Description: used for all chat-related tables
+===== Replications =====
+| **Name** | **Replication** | **Description**
+| dev | 'class': 'SimpleStrategy', 'replication_factor' : 1 | used for dev environment
+
+== Table: user_chats ==
+Description: used to stores all chat messages per-user
+===== Columns =====
+| **Name** | **Type**
+| user_id | uuid
+| message_time | bigint
+| sender_user_id | uuid
+| receiver_user_id | uuid
+| message_id | uuid
+`Partition Keys: user_id, message_time, sender_user_id`
+`Caching: ALL`
+`Order By: message_time : DESC`
+
+===== Queries: =====
+
+**Query: insert**
+inserts a new message for a user
+`INSERT INTO wa_chat.user_chats (user_id, message_time, sender_user_id, receiver_user_id, message_id) VALUES (:user_id, :message_time, :sender_user_id, :receiver_user_id, :message_id);`
+**Query: select_recent**
+selects recent messages
+`SELECT message_time, sender_user_id, receiver_user_id, message_id FROM wa_chat.user_chats WHERE user_id = :user_id AND message_time > :message_time;`
+**Query: select_all**
+selects all user's messages
+`SELECT message_time, sender_user_id, receiver_user_id, message_id FROM wa_chat.user_chats WHERE user_id = :user_id;`
+
+

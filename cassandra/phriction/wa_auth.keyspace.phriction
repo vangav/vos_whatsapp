@@ -1,0 +1,44 @@
+= **Keyspace: wa_auth** =
+Description: used for all authentication-related tables
+===== Replications =====
+| **Name** | **Replication** | **Description**
+| dev | 'class': 'SimpleStrategy', 'replication_factor' : 1 | used for dev environment
+
+== Table: phone_numbers ==
+Description: used to map phone numbers to users' ids
+===== Columns =====
+| **Name** | **Type**
+| phone_number | varchar
+| user_id | uuid
+`Partition Keys: phone_number`
+`Caching: ALL`
+
+===== Queries: =====
+
+**Query: insert**
+inserts new user's phone number and user id
+`INSERT INTO wa_auth.phone_numbers (phone_number, user_id) VALUES (:phone_number, :user_id);`
+**Query: select**
+selects a phone number's user id
+`SELECT user_id FROM wa_auth.phone_numbers WHERE phone_number = :phone_number;`
+
+
+== Table: auth_creds ==
+Description: used to map users' ids to generated passwords for authenticating users and requests
+===== Columns =====
+| **Name** | **Type**
+| user_id | uuid
+| password | varchar
+`Partition Keys: user_id`
+`Caching: ALL`
+
+===== Queries: =====
+
+**Query: insert**
+inserts new user's user id and password
+`INSERT INTO wa_auth.auth_creds (user_id, password) VALUES (:user_id, :password);`
+**Query: select**
+selects a user id's password
+`SELECT password FROM wa_auth.auth_creds WHERE user_id = :user_id;`
+
+

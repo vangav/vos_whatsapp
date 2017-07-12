@@ -1,0 +1,40 @@
+= **Keyspace: wa_users** =
+Description: used for all users-info-related tables
+===== Replications =====
+| **Name** | **Replication** | **Description**
+| dev | 'class': 'SimpleStrategy', 'replication_factor' : 1 | used for dev environment
+
+== Table: users_info ==
+Description: stores user information
+===== Columns =====
+| **Name** | **Type**
+| user_id | uuid
+| name | varchar
+| phone_number | varchar
+| phone_type | varchar
+| device_token | varchar
+`Partition Keys: user_id`
+`Caching: ALL`
+
+===== Queries: =====
+
+**Query: insert**
+inserts new user's data
+`INSERT INTO wa_users.users_info (user_id, name, phone_number, phone_type, device_token) VALUES (:user_id, :name, :phone_number, :phone_type, :device_token);`
+**Query: select_all**
+selects all user's data
+`SELECT name, phone_number, phone_type, device_token FROM wa_users.users_info WHERE user_id = :user_id;`
+**Query: select_name**
+selects a user's name
+`SELECT name FROM wa_users.users_info WHERE user_id = :user_id;`
+**Query: select_phone_number**
+selects a user's phone number
+`SElECT phone_number FROM wa_users.users_info WHERE user_id = :user_id;`
+**Query: select_phone_type**
+selects a user's phone_type
+`SELECT phone_type FROM wa_users.users_info WHERE user_id = :user_id;`
+**Query: select_device_token**
+selects a user's device token
+`SELECT device_token FROM wa_users.users_info WHERE user_id = :user_id;`
+
+

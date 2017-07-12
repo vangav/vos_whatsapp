@@ -1,0 +1,25 @@
+= **Keyspace: wa_blobs** =
+Description: used for all blobs-related tables
+===== Replications =====
+| **Name** | **Replication** | **Description**
+| dev | 'class': 'SimpleStrategy', 'replication_factor' : 1 | used for dev environment
+
+== Table: messages ==
+Description: used to store all messages
+===== Columns =====
+| **Name** | **Type**
+| message_id | uuid
+| message | blob
+`Partition Keys: message_id`
+`Caching: ALL`
+
+===== Queries: =====
+
+**Query: insert**
+inserts new messages
+`INSERT INTO wa_blobs.messages (message_id, message) VALUES (:message_id, :message);`
+**Query: select**
+selects a message
+`SELECT message FROM wa_blobs.messages WHERE message_id = :message_id;`
+
+

@@ -1,0 +1,38 @@
+= **Keyspace: wa_analysis** =
+Description: used for all analysis-related tables
+===== Replications =====
+| **Name** | **Replication** | **Description**
+| dev | 'class': 'SimpleStrategy', 'replication_factor' : 1 | used for dev environment
+
+== Table: users_count ==
+Description: counts new users per-day
+===== Columns =====
+| **Name** | **Type**
+| year_month_day | varchar
+| counter_value | counter
+`Partition Keys: year_month_day`
+`Caching: ALL`
+
+===== Queries: =====
+
+**Query: increment**
+increments the number of signed up users on a day
+`UPDATE wa_analysis.users_count SET counter_value = counter_value + 1 WHERE year_month_day = :year_month_day;`
+
+
+== Table: messages_count ==
+Description: counts new messages per-day
+===== Columns =====
+| **Name** | **Type**
+| year_month_day | varchar
+| counter_value | counter
+`Partition Keys: year_month_day`
+`Caching: ALL`
+
+===== Queries: =====
+
+**Query: increment**
+increments the number of sent messages on a day
+`UPDATE wa_analysis.messages_count SET counter_value = counter_value + 1 WHERE year_month_day = :year_month_day;`
+
+
