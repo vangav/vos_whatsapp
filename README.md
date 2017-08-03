@@ -1,5 +1,5 @@
 
-> **why?** whatsapp is a [vangav backend](https://github.com/vangav/vos_backend) template covering; service oriented architecture, worker service, multi-entry-point api, basic authentication and multi-keysapce database
+> **why?** whatsapp is a [vangav backend](https://github.com/vangav/vos_backend) template covering: service oriented architecture, worker service, multi-entry-point api, basic authentication and multi-keysapce database
 
 # whatsapp
 
