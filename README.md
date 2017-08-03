@@ -44,9 +44,59 @@
 9. `cd` to `vos_whatsapp_worker` and execute `./_run.sh` to start the whatsapp worker service on port 8000
 10. `cd` to `vos_whatsapp_analytics` and execute `./_run.sh 7000` to start the whatsapp worker service on port 7000
 11. `cd` to `vos_whatsapp` and execute `./_run.sh` to start the whatsapp worker service on port 9000
-12. from your prefered client (*we recommned* [postman](https://www.getpostman.com/docs/postman/launching_postman/installation_and_updates)) start trying the service; refer to the [features](https://github.com/vangav/vos_geo_server#features) and [api](https://github.com/vangav/vos_geo_server#api) sections for reference
-+ at the end to stop the service: press `control + d` in the terminal session where the service was started in (10)
+12. from your prefered client (*we recommned* [postman](https://www.getpostman.com/docs/postman/launching_postman/installation_and_updates)) start trying the service; refer to the **features** and **service references** sections for reference
++ at the end to stop the services: press `control + d` in the terminal session where each service was started in (9, 10 and 11)
 + to stop cassandra: execute `ps auwx | grep cassandra` to get cassandra's `(pid)` then `kill -9 (pid)` to stop cassandra
+
+## covered topics
+
++ generate multiple services (main + worker + analytics) to work together in a service oriented architecture
++ generate a multi-keyspace database
++ basic authentication
+
+## features
+
+### [whatsapp](https://github.com/vangav/vos_whatsapp)
+
+| controller(s) | feature |
+| ------------- | ------- |
+| [signup](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/controllers/signup) | handles new users' signup using phone numbers |
+| [send message](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/controllers/send_message) | handles sending a message |
+| [get messages](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/controllers/get_messages) and [get user info](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/controllers/get_user_info) | handles getting new messages and users' info (id, name, ...) |
+
+### [whatsapp analytics](https://github.com/vangav/vos_whatsapp_analytics)
+
+| controllers | feature |
+| ------------- | ------- |
+| [get users count](https://github.com/vangav/vos_whatsapp_analytics/tree/master/app/com/vangav/vos_whatsapp_analytics/controllers/get_users_count) and [get messages count](https://github.com/vangav/vos_whatsapp_analytics/tree/master/app/com/vangav/vos_whatsapp_analytics/controllers/get_messages_count) | handles fetching analytics data (total counts and count per-day) |
+
+## service references
+
+### [whatsapp](https://github.com/vangav/vos_whatsapp)
+
+| reference | explanation |
+| --------- | ----------- |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+
+### [whatsapp analytics](https://github.com/vangav/vos_whatsapp_analytics)
+
+| reference | explanation |
+| --------- | ----------- |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
 
 
 
