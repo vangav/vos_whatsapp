@@ -95,22 +95,11 @@
 
 | reference | explanation |
 | --------- | ----------- |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
+| [routes](https://github.com/vangav/vos_whatsapp_analytics/blob/master/conf/routes) | api routes |
+| [controllers.json](https://github.com/vangav/vos_whatsapp_analytics/blob/master/generator_config/controllers.json) | api request/response's elements |
+| [wa_analysis.keyspace](https://github.com/vangav/vos_whatsapp_analytics/blob/master/generator_config/wa_analysis.keyspace) | `wa_analysis` is the keyspace used for all analysis-related tables |
+| [controllers](https://github.com/vangav/vos_whatsapp_analytics/tree/master/app/com/vangav/vos_whatsapp_analytics/controllers) | api implementation |
+| [wa_analysis](https://github.com/vangav/vos_whatsapp_analytics/tree/master/app/com/vangav/vos_whatsapp_analytics/cassandra_keyspaces/wa_analysis) | `wa_analysis` cassandra's keyspace client |
 
 
 
