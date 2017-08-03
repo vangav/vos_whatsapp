@@ -76,19 +76,33 @@
 
 | reference | explanation |
 | --------- | ----------- |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
+| [routes](https://github.com/vangav/vos_whatsapp/blob/master/conf/routes) | api routes |
+| [controllers.json](https://github.com/vangav/vos_whatsapp/blob/master/generator_config/controllers.json) | api request/response's elements |
+| [wa_auth.keyspace](https://github.com/vangav/vos_whatsapp/blob/master/generator_config/wa_auth.keyspace) | `wa_auth` is the keyspace used for all authentication-related tables |
+| [wa_users.keyspace](https://github.com/vangav/vos_whatsapp/blob/master/generator_config/wa_users.keyspace) | `wa_users` is the keyspace used for all users-info-related tables |
+| [wa_chat.keyspace](https://github.com/vangav/vos_whatsapp/blob/master/generator_config/wa_chat.keyspace) | `wa_chat` is the keyspace used for all chat-related tables |
+| [wa_blobs.keyspace](https://github.com/vangav/vos_whatsapp/blob/master/generator_config/wa_blobs.keyspace) | `wa_blobs` is the keyspace used for all blobs-related tables |
+| [wa_analysis.keyspace](https://github.com/vangav/vos_whatsapp/blob/master/generator_config/wa_analysis.keyspace) | `wa_analysis` is the keyspace used for all analysis-related tables |
+| [common](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/controllers/common) | handles controllers' common operations like authentication |
+| [controllers](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/controllers) | api implementation |
+| [wa_auth](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/cassandra_keyspaces/wa_auth) | `wa_auth` cassandra's keyspace client |
+| [wa_users](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/cassandra_keyspaces/wa_users) | `wa_users` cassandra's keyspace client |
+| [wa_chat](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/cassandra_keyspaces/wa_chat) | `wa_chat` cassandra's keyspace client |
+| [wa_blobs](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/cassandra_keyspaces/wa_blobs) | `wa_blobs` cassandra's keyspace client |
+| [wa_analysis](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/cassandra_keyspaces/wa_analysis) | `wa_analysis` cassandra's keyspace client |
 
 ### [whatsapp analytics](https://github.com/vangav/vos_whatsapp_analytics)
 
 | reference | explanation |
 | --------- | ----------- |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
 | []() |  |
 | []() |  |
 | []() |  |
