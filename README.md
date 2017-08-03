@@ -145,32 +145,7 @@
 
 | class | code : sub_code | explanation |
 | ----- | --------------- | ----------- |
-| []() |  |  |
-| []() |  |  |
-| []() |  |  |
-| []() |  |  |
-| []() |  |  |
-| []() |  |  |
-| []() |  |  |
-| []() |  |  |
-| []() |  |  |
-| []() |  |  |
-| []() |  |  |
-| []() |  |  |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| [HandlerGetMessagesCount](https://github.com/vangav/vos_whatsapp_analytics/blob/master/app/com/vangav/vos_whatsapp_analytics/controllers/get_messages_count/HandlerGetMessagesCount.java) |  |  |
+|  | 400 : 1 | to-date is smaller than from-date |
+| [HandlerGetUsersCount](https://github.com/vangav/vos_whatsapp_analytics/blob/master/app/com/vangav/vos_whatsapp_analytics/controllers/get_users_count/HandlerGetUsersCount.java) |  |  |
+|  | 401 : 1 | to-date is smaller than from-date |
