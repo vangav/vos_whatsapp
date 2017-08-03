@@ -101,8 +101,62 @@
 | [controllers](https://github.com/vangav/vos_whatsapp_analytics/tree/master/app/com/vangav/vos_whatsapp_analytics/controllers) | api implementation |
 | [wa_analysis](https://github.com/vangav/vos_whatsapp_analytics/tree/master/app/com/vangav/vos_whatsapp_analytics/cassandra_keyspaces/wa_analysis) | `wa_analysis` cassandra's keyspace client |
 
+## change log
 
++ this section lists the 10-% code added after vangav backend generated 90+% of the code
 
+### [whatsapp](https://github.com/vangav/vos_whatsapp)
+
+| file/dir | change |
+| -------- | ------ |
+| [common](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/controllers/common) | added common controllers' operations like authentication |
+| [controllers](https://github.com/vangav/vos_whatsapp/tree/master/app/com/vangav/vos_whatsapp/controllers) | added the implementation of request processing logic under `controller_name/HandlerControllerName.java` classes and nested response json structures under `controller_name/response_json` packages |
+
+### [whatsapp analytics](https://github.com/vangav/vos_whatsapp_analytics)
+
+| file/dir | change |
+| -------- | ------ |
+| [controllers](https://github.com/vangav/vos_whatsapp_analytics/tree/master/app/com/vangav/vos_whatsapp_analytics/controllers) | added the implementation of request processing logic under `controller_name/HandlerControllerName.java` classes and nested response json structures under `controller_name/response_json` packages |
+
+## error codes
+
++ following are the error codes of whatsapp services
+
+### [whatsapp](https://github.com/vangav/vos_whatsapp)
+
+| class | code : sub_code | explanation |
+| ----- | --------------- | ----------- |
+| [CommonPlayHandler](https://github.com/vangav/vos_whatsapp/blob/master/app/com/vangav/vos_whatsapp/controllers/CommonPlayHandler.java) |  |  |
+|  | 300 : 1 | user not signed up |
+|  | 300 : 2 | wrong password |
+| [HandlerSignup](https://github.com/vangav/vos_whatsapp/blob/master/app/com/vangav/vos_whatsapp/controllers/signup/HandlerSignup.java) |  |  |
+|  | 301 : 1 | user has no password |
+|  | 301 : 2 | wrong password |
+| [HandlerGetUserInfo](https://github.com/vangav/vos_whatsapp/blob/master/app/com/vangav/vos_whatsapp/controllers/get_user_info/HandlerGetUserInfo.java) |  |  |
+|  | 302 : 1 | user not registered |
+|  | 302 : 2 | didn't find user's info |
+| [HandlerSendMessage](https://github.com/vangav/vos_whatsapp/blob/master/app/com/vangav/vos_whatsapp/controllers/send_message/HandlerSendMessage.java) |  |  |
+|  | 303 : 1 | can't send message(s) to yourself |
+|  | 303 : 2 | message's recieving user isn't registered |
+| [HandlerGetMessages](https://github.com/vangav/vos_whatsapp/blob/master/app/com/vangav/vos_whatsapp/controllers/get_messages/HandlerGetMessages.java) |  |  |
+|  | 304 : 1 | didn't find message's blob (content) |
+
+### [whatsapp analytics](https://github.com/vangav/vos_whatsapp_analytics)
+
+| class | code : sub_code | explanation |
+| ----- | --------------- | ----------- |
+| []() |  |  |
+| []() |  |  |
+| []() |  |  |
+| []() |  |  |
+| []() |  |  |
+| []() |  |  |
+| []() |  |  |
+| []() |  |  |
+| []() |  |  |
+| []() |  |  |
+| []() |  |  |
+| []() |  |  |
 
 
 
