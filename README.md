@@ -149,3 +149,8 @@
 |  | 400 : 1 | to-date is smaller than from-date |
 | [HandlerGetUsersCount](https://github.com/vangav/vos_whatsapp_analytics/blob/master/app/com/vangav/vos_whatsapp_analytics/controllers/get_users_count/HandlerGetUsersCount.java) |  |  |
 |  | 401 : 1 | to-date is smaller than from-date |
+
+## notes
+
++ [whatsapp](https://github.com/vangav/vos_whatsapp), [whatsapp worker](https://github.com/vangav/vos_whatsapp_worker) and [whatsapp analytics](https://github.com/vangav/vos_whatsapp_analytics) services has no connection with [WhatsApp Inc.](https://www.whatsapp.com/); these services are just a [vangav backend](https://github.com/vangav/vos_backend) template to demonstrate using some features/utilities in the context of texting apps
++ the "whatsapp" name is used for users to easier understand the services' design, features and source code
