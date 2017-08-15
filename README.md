@@ -31,6 +31,14 @@
 + this service is based on vangav backend's [whatsapp template](https://github.com/vangav/vos_backend/tree/master/vangav_backend_templates/whatsapp)
 + this service has the 90+% of the vangav backend's generated code + the 10-% of the logic code needed to complete the service
 
+## eclipse
+
++ follow the following steps to import the downloaded backend service in eclipse
+
+1. `cd` to the service's directory and execute the `./_eclipsify.sh` script
+2. file **>** import **>** general **>** existing projects into workspace **>** next **>** set "select root directory" to my_services **>** under projects make sure that vos_calculate_sum is selected **>** finish
+3. double check the java version used for compiling the project: right click the project **>** properties **>** java compiler **>** enable project specific settings **>** compiler compliance level **>** 1.7 or 1.8
+
 ## try this service
 
 1. *for first timers* - follow the steps in the [system requirements tutorial](https://github.com/vangav/vos_backend#system-requirements)
