@@ -1,9 +1,13 @@
 
+### [![YouTube Play Icon](http://youtube.com/favicon.ico)](https://www.youtube.com/watch?v=2cAfe3Caank&index=6&list=PLTcKayTjao6rOj02gtRdiVhvzB1SWGyhv) **on [YouTube](https://www.youtube.com/watch?v=2cAfe3Caank&index=6&list=PLTcKayTjao6rOj02gtRdiVhvzB1SWGyhv)**
+
 > **why?** whatsapp is a [vangav backend](https://github.com/vangav/vos_backend) template covering: service oriented architecture, worker service, multi-entry-point api, basic authentication and multi-keysapce database
 
 # whatsapp
 
 + [whatsapp](https://github.com/vangav/vos_whatsapp), [whatsapp worker](https://github.com/vangav/vos_whatsapp_worker) and [whatsapp analytics](https://github.com/vangav/vos_whatsapp_analytics) services work together and are generated using [vangav backend](https://github.com/vangav/vos_backend)
+
+![whatsapp backend design](https://scontent-mad1-1.xx.fbcdn.net/v/t31.0-8/21015886_1976185472597096_8042485924961729100_o.png?oh=54db3d0734f655f7228d58df78258d79&oe=5A60161E)
 
 ## prerequisite
 
