@@ -7,7 +7,7 @@
 
 + [whatsapp](https://github.com/vangav/vos_whatsapp), [whatsapp worker](https://github.com/vangav/vos_whatsapp_worker) and [whatsapp analytics](https://github.com/vangav/vos_whatsapp_analytics) services work together and are generated using [vangav backend](https://github.com/vangav/vos_backend)
 
-![whatsapp backend design](https://scontent-mad1-1.xx.fbcdn.net/v/t31.0-8/21015886_1976185472597096_8042485924961729100_o.png?oh=54db3d0734f655f7228d58df78258d79&oe=5A60161E)
+![whatsapp backend design](https://scontent-ams4-1.xx.fbcdn.net/v/t31.0-8/21015886_1976185472597096_8042485924961729100_o.png?_nc_cat=103&_nc_oc=AQmudSTmSFY2gNbZvKYhOGOY0b02jvhK38a--Sz6r_9WuVMvaYKVPv60UYHqgtvJ9RM&_nc_ht=scontent-ams4-1.xx&oh=0f861f266d390df4e0b8448d1fd5386e&oe=5E3CDB1E)
 
 ## prerequisite
 
